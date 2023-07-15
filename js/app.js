@@ -109,9 +109,10 @@ function sumArray(sumArr) { //eslint-disable-line'
   let array = [];
   // let firstSum = sum(a, b)[0];
   // let secondSum = sum(firstSum, c)[0];
-  let superSum = sumAndMultiply(a,b,c)[0]
+  let superSum = sumAndMultiply(a,b,c)[0];
   array.push(superSum);
   array.push(`${a},${b},${c} was passed in as an array of numbers, and ${superSum} is their sum.`);
+  array.push(a + ' ,' b + c)
   console.log(sumArr);
   return array;
 }
