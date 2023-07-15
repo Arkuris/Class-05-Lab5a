@@ -65,11 +65,21 @@ for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  let array = [];
 
+  let firstSum = sum(a,b)[0];
+  let secondSum = sum(firstSum, c)[0];
+  let firstMulti = multiply(a,b)[0];
+  let secondMulti = multiply(firstMulti, c)[0];
+  array.push(secondSum, secondMulti);
+  array.push(a + ' and ' + b + ' and ' + c + ' sum to ' + (secondSum) + '.');
+  array.push('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + (secondMulti) + '.');
+  console.log(array);
+  return array;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -92,13 +102,23 @@ for the testSumArray() function and see if the test passes.*/
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
-
+function sumArray(sumArr) { //eslint-disable-line'
+  let a = sumArr[0];
+  let b = sumArr[1];
+  let c = sumArr[2];
+  let array = [];
+  // let firstSum = sum(a, b)[0];
+  // let secondSum = sum(firstSum, c)[0];
+  let superSum = sumAndMultiply(a,b,c)[0]
+  array.push(superSum);
+  array.push(`${a},${b},${c} was passed in as an array of numbers, and ${superSum} is their sum.`);
+  console.log(sumArr);
+  return array;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
